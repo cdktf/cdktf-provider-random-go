@@ -1,12 +1,12 @@
 // Prebuilt random Provider for Terraform CDK (cdktf)
-package cdktfproviderrandom
+package random
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/hashicorp/cdktf-provider-random-go/cdktfproviderrandom/jsii"
+	_init_ "github.com/hashicorp/cdktf-provider-random-go/random/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/hashicorp/cdktf-provider-random-go/cdktfproviderrandom/internal"
+	"github.com/hashicorp/cdktf-provider-random-go/random/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 

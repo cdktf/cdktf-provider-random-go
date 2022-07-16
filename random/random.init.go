@@ -1,4 +1,4 @@
-package cdktfproviderrandom
+package random
 
 import (
 	"reflect"
