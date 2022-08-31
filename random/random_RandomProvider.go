@@ -185,6 +185,9 @@ func (j *jsiiProxy_RandomProvider) TerraformResourceType() *string {
 func NewRandomProvider(scope constructs.Construct, id *string, config *RandomProviderConfig) RandomProvider {
 	_init_.Initialize()
 
+	if err := validateNewRandomProviderParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_RandomProvider{}
 
 	_jsii_.Create(
@@ -207,7 +210,7 @@ func NewRandomProvider_Override(r RandomProvider, scope constructs.Construct, id
 	)
 }
 
-func (j *jsiiProxy_RandomProvider) SetAlias(val *string) {
+func (j *jsiiProxy_RandomProvider)SetAlias(val *string) {
 	_jsii_.Set(
 		j,
 		"alias",
@@ -235,6 +238,9 @@ func (j *jsiiProxy_RandomProvider) SetAlias(val *string) {
 func RandomProvider_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateRandomProvider_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -259,6 +265,9 @@ func RandomProvider_TfResourceType() *string {
 }
 
 func (r *jsiiProxy_RandomProvider) AddOverride(path *string, value interface{}) {
+	if err := r.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"addOverride",
@@ -267,6 +276,9 @@ func (r *jsiiProxy_RandomProvider) AddOverride(path *string, value interface{}) 
 }
 
 func (r *jsiiProxy_RandomProvider) OverrideLogicalId(newLogicalId *string) {
+	if err := r.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"overrideLogicalId",
