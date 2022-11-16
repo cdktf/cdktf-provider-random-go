@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package stringresource
 
@@ -54,6 +53,14 @@ func (s *jsiiProxy_StringResource) validateOverrideLogicalIdParameters(newLogica
 }
 
 func validateStringResource_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateStringResource_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateStringResource_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 

@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package pet
 
@@ -54,6 +53,14 @@ func (p *jsiiProxy_Pet) validateOverrideLogicalIdParameters(newLogicalId *string
 }
 
 func validatePet_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validatePet_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validatePet_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
