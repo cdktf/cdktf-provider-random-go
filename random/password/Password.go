@@ -2,10 +2,10 @@ package password
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-random-go/random/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-random-go/random/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-random-go/random/v5/password/internal"
+	"github.com/cdktf/cdktf-provider-random-go/random/v6/password/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 

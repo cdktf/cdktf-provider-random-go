@@ -1,16 +1,16 @@
-package uuid
+package integer
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-random-go/random/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-random-go/random/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-random-go/random/v5/uuid/internal"
+	"github.com/cdktf/cdktf-provider-random-go/random/v6/integer/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/random/r/uuid random_uuid}.
-type Uuid interface {
+// Represents a {@link https://www.terraform.io/docs/providers/random/r/integer random_integer}.
+type Integer interface {
 	cdktf.TerraformResource
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -44,6 +44,12 @@ type Uuid interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Max() *float64
+	SetMax(val *float64)
+	MaxInput() *float64
+	Min() *float64
+	SetMin(val *float64)
+	MinInput() *float64
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -56,7 +62,10 @@ type Uuid interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
-	Result() *string
+	Result() *float64
+	Seed() *string
+	SetSeed(val *string)
+	SeedInput() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -92,6 +101,7 @@ type Uuid interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetSeed()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -102,12 +112,12 @@ type Uuid interface {
 	ToTerraform() interface{}
 }
 
-// The jsii proxy struct for Uuid
-type jsiiProxy_Uuid struct {
+// The jsii proxy struct for Integer
+type jsiiProxy_Integer struct {
 	internal.Type__cdktfTerraformResource
 }
 
-func (j *jsiiProxy_Uuid) CdktfStack() cdktf.TerraformStack {
+func (j *jsiiProxy_Integer) CdktfStack() cdktf.TerraformStack {
 	var returns cdktf.TerraformStack
 	_jsii_.Get(
 		j,
@@ -117,7 +127,7 @@ func (j *jsiiProxy_Uuid) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) Connection() interface{} {
+func (j *jsiiProxy_Integer) Connection() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -127,7 +137,7 @@ func (j *jsiiProxy_Uuid) Connection() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) ConstructNodeMetadata() *map[string]interface{} {
+func (j *jsiiProxy_Integer) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
 		j,
@@ -137,7 +147,7 @@ func (j *jsiiProxy_Uuid) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) Count() *float64 {
+func (j *jsiiProxy_Integer) Count() *float64 {
 	var returns *float64
 	_jsii_.Get(
 		j,
@@ -147,7 +157,7 @@ func (j *jsiiProxy_Uuid) Count() *float64 {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) DependsOn() *[]*string {
+func (j *jsiiProxy_Integer) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -157,7 +167,7 @@ func (j *jsiiProxy_Uuid) DependsOn() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) ForEach() cdktf.ITerraformIterator {
+func (j *jsiiProxy_Integer) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
 		j,
@@ -167,7 +177,7 @@ func (j *jsiiProxy_Uuid) ForEach() cdktf.ITerraformIterator {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) Fqn() *string {
+func (j *jsiiProxy_Integer) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -177,7 +187,7 @@ func (j *jsiiProxy_Uuid) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) FriendlyUniqueId() *string {
+func (j *jsiiProxy_Integer) FriendlyUniqueId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -187,7 +197,7 @@ func (j *jsiiProxy_Uuid) FriendlyUniqueId() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) Id() *string {
+func (j *jsiiProxy_Integer) Id() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -197,7 +207,7 @@ func (j *jsiiProxy_Uuid) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) Keepers() *map[string]*string {
+func (j *jsiiProxy_Integer) Keepers() *map[string]*string {
 	var returns *map[string]*string
 	_jsii_.Get(
 		j,
@@ -207,7 +217,7 @@ func (j *jsiiProxy_Uuid) Keepers() *map[string]*string {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) KeepersInput() *map[string]*string {
+func (j *jsiiProxy_Integer) KeepersInput() *map[string]*string {
 	var returns *map[string]*string
 	_jsii_.Get(
 		j,
@@ -217,7 +227,7 @@ func (j *jsiiProxy_Uuid) KeepersInput() *map[string]*string {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) Lifecycle() *cdktf.TerraformResourceLifecycle {
+func (j *jsiiProxy_Integer) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
 		j,
@@ -227,7 +237,47 @@ func (j *jsiiProxy_Uuid) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) Node() constructs.Node {
+func (j *jsiiProxy_Integer) Max() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"max",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Integer) MaxInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Integer) Min() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"min",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Integer) MinInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"minInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Integer) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
@@ -237,7 +287,7 @@ func (j *jsiiProxy_Uuid) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) Provider() cdktf.TerraformProvider {
+func (j *jsiiProxy_Integer) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
 		j,
@@ -247,7 +297,7 @@ func (j *jsiiProxy_Uuid) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) Provisioners() *[]interface{} {
+func (j *jsiiProxy_Integer) Provisioners() *[]interface{} {
 	var returns *[]interface{}
 	_jsii_.Get(
 		j,
@@ -257,7 +307,7 @@ func (j *jsiiProxy_Uuid) Provisioners() *[]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) RawOverrides() interface{} {
+func (j *jsiiProxy_Integer) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -267,8 +317,8 @@ func (j *jsiiProxy_Uuid) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) Result() *string {
-	var returns *string
+func (j *jsiiProxy_Integer) Result() *float64 {
+	var returns *float64
 	_jsii_.Get(
 		j,
 		"result",
@@ -277,7 +327,27 @@ func (j *jsiiProxy_Uuid) Result() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
+func (j *jsiiProxy_Integer) Seed() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"seed",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Integer) SeedInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"seedInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Integer) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
 		j,
@@ -287,7 +357,7 @@ func (j *jsiiProxy_Uuid) TerraformGeneratorMetadata() *cdktf.TerraformProviderGe
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) TerraformMetaArguments() *map[string]interface{} {
+func (j *jsiiProxy_Integer) TerraformMetaArguments() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
 		j,
@@ -297,7 +367,7 @@ func (j *jsiiProxy_Uuid) TerraformMetaArguments() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Uuid) TerraformResourceType() *string {
+func (j *jsiiProxy_Integer) TerraformResourceType() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -308,17 +378,17 @@ func (j *jsiiProxy_Uuid) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/random/r/uuid random_uuid} Resource.
-func NewUuid(scope constructs.Construct, id *string, config *UuidConfig) Uuid {
+// Create a new {@link https://www.terraform.io/docs/providers/random/r/integer random_integer} Resource.
+func NewInteger(scope constructs.Construct, id *string, config *IntegerConfig) Integer {
 	_init_.Initialize()
 
-	if err := validateNewUuidParameters(scope, id, config); err != nil {
+	if err := validateNewIntegerParameters(scope, id, config); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_Uuid{}
+	j := jsiiProxy_Integer{}
 
 	_jsii_.Create(
-		"@cdktf/provider-random.uuid.Uuid",
+		"@cdktf/provider-random.integer.Integer",
 		[]interface{}{scope, id, config},
 		&j,
 	)
@@ -326,18 +396,18 @@ func NewUuid(scope constructs.Construct, id *string, config *UuidConfig) Uuid {
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/random/r/uuid random_uuid} Resource.
-func NewUuid_Override(u Uuid, scope constructs.Construct, id *string, config *UuidConfig) {
+// Create a new {@link https://www.terraform.io/docs/providers/random/r/integer random_integer} Resource.
+func NewInteger_Override(i Integer, scope constructs.Construct, id *string, config *IntegerConfig) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-random.uuid.Uuid",
+		"@cdktf/provider-random.integer.Integer",
 		[]interface{}{scope, id, config},
-		u,
+		i,
 	)
 }
 
-func (j *jsiiProxy_Uuid)SetConnection(val interface{}) {
+func (j *jsiiProxy_Integer)SetConnection(val interface{}) {
 	if err := j.validateSetConnectionParameters(val); err != nil {
 		panic(err)
 	}
@@ -348,7 +418,7 @@ func (j *jsiiProxy_Uuid)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Uuid)SetCount(val *float64) {
+func (j *jsiiProxy_Integer)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -356,7 +426,7 @@ func (j *jsiiProxy_Uuid)SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Uuid)SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_Integer)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -364,7 +434,7 @@ func (j *jsiiProxy_Uuid)SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Uuid)SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_Integer)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -372,7 +442,7 @@ func (j *jsiiProxy_Uuid)SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_Uuid)SetKeepers(val *map[string]*string) {
+func (j *jsiiProxy_Integer)SetKeepers(val *map[string]*string) {
 	if err := j.validateSetKeepersParameters(val); err != nil {
 		panic(err)
 	}
@@ -383,7 +453,7 @@ func (j *jsiiProxy_Uuid)SetKeepers(val *map[string]*string) {
 	)
 }
 
-func (j *jsiiProxy_Uuid)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_Integer)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	if err := j.validateSetLifecycleParameters(val); err != nil {
 		panic(err)
 	}
@@ -394,7 +464,29 @@ func (j *jsiiProxy_Uuid)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	)
 }
 
-func (j *jsiiProxy_Uuid)SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_Integer)SetMax(val *float64) {
+	if err := j.validateSetMaxParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"max",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Integer)SetMin(val *float64) {
+	if err := j.validateSetMinParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"min",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Integer)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -402,13 +494,24 @@ func (j *jsiiProxy_Uuid)SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_Uuid)SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_Integer)SetProvisioners(val *[]interface{}) {
 	if err := j.validateSetProvisionersParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Integer)SetSeed(val *string) {
+	if err := j.validateSetSeedParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"seed",
 		val,
 	)
 }
@@ -430,16 +533,16 @@ func (j *jsiiProxy_Uuid)SetProvisioners(val *[]interface{}) {
 // this type-testing method instead.
 //
 // Returns: true if `x` is an object created from a class which extends `Construct`.
-func Uuid_IsConstruct(x interface{}) *bool {
+func Integer_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateUuid_IsConstructParameters(x); err != nil {
+	if err := validateInteger_IsConstructParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-random.uuid.Uuid",
+		"@cdktf/provider-random.integer.Integer",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -449,16 +552,16 @@ func Uuid_IsConstruct(x interface{}) *bool {
 }
 
 // Experimental.
-func Uuid_IsTerraformElement(x interface{}) *bool {
+func Integer_IsTerraformElement(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateUuid_IsTerraformElementParameters(x); err != nil {
+	if err := validateInteger_IsTerraformElementParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-random.uuid.Uuid",
+		"@cdktf/provider-random.integer.Integer",
 		"isTerraformElement",
 		[]interface{}{x},
 		&returns,
@@ -468,16 +571,16 @@ func Uuid_IsTerraformElement(x interface{}) *bool {
 }
 
 // Experimental.
-func Uuid_IsTerraformResource(x interface{}) *bool {
+func Integer_IsTerraformResource(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateUuid_IsTerraformResourceParameters(x); err != nil {
+	if err := validateInteger_IsTerraformResourceParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-random.uuid.Uuid",
+		"@cdktf/provider-random.integer.Integer",
 		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
@@ -486,36 +589,36 @@ func Uuid_IsTerraformResource(x interface{}) *bool {
 	return returns
 }
 
-func Uuid_TfResourceType() *string {
+func Integer_TfResourceType() *string {
 	_init_.Initialize()
 	var returns *string
 	_jsii_.StaticGet(
-		"@cdktf/provider-random.uuid.Uuid",
+		"@cdktf/provider-random.integer.Integer",
 		"tfResourceType",
 		&returns,
 	)
 	return returns
 }
 
-func (u *jsiiProxy_Uuid) AddOverride(path *string, value interface{}) {
-	if err := u.validateAddOverrideParameters(path, value); err != nil {
+func (i *jsiiProxy_Integer) AddOverride(path *string, value interface{}) {
+	if err := i.validateAddOverrideParameters(path, value); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		u,
+		i,
 		"addOverride",
 		[]interface{}{path, value},
 	)
 }
 
-func (u *jsiiProxy_Uuid) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
-	if err := u.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+func (i *jsiiProxy_Integer) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := i.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
-		u,
+		i,
 		"getAnyMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -524,14 +627,14 @@ func (u *jsiiProxy_Uuid) GetAnyMapAttribute(terraformAttribute *string) *map[str
 	return returns
 }
 
-func (u *jsiiProxy_Uuid) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
-	if err := u.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+func (i *jsiiProxy_Integer) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := i.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
-		u,
+		i,
 		"getBooleanAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -540,14 +643,14 @@ func (u *jsiiProxy_Uuid) GetBooleanAttribute(terraformAttribute *string) cdktf.I
 	return returns
 }
 
-func (u *jsiiProxy_Uuid) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
-	if err := u.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+func (i *jsiiProxy_Integer) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := i.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
-		u,
+		i,
 		"getBooleanMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -556,14 +659,14 @@ func (u *jsiiProxy_Uuid) GetBooleanMapAttribute(terraformAttribute *string) *map
 	return returns
 }
 
-func (u *jsiiProxy_Uuid) GetListAttribute(terraformAttribute *string) *[]*string {
-	if err := u.validateGetListAttributeParameters(terraformAttribute); err != nil {
+func (i *jsiiProxy_Integer) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := i.validateGetListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
-		u,
+		i,
 		"getListAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -572,14 +675,14 @@ func (u *jsiiProxy_Uuid) GetListAttribute(terraformAttribute *string) *[]*string
 	return returns
 }
 
-func (u *jsiiProxy_Uuid) GetNumberAttribute(terraformAttribute *string) *float64 {
-	if err := u.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+func (i *jsiiProxy_Integer) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := i.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *float64
 
 	_jsii_.Invoke(
-		u,
+		i,
 		"getNumberAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -588,14 +691,14 @@ func (u *jsiiProxy_Uuid) GetNumberAttribute(terraformAttribute *string) *float64
 	return returns
 }
 
-func (u *jsiiProxy_Uuid) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
-	if err := u.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+func (i *jsiiProxy_Integer) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := i.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
-		u,
+		i,
 		"getNumberListAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -604,14 +707,14 @@ func (u *jsiiProxy_Uuid) GetNumberListAttribute(terraformAttribute *string) *[]*
 	return returns
 }
 
-func (u *jsiiProxy_Uuid) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
-	if err := u.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+func (i *jsiiProxy_Integer) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := i.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
-		u,
+		i,
 		"getNumberMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -620,14 +723,14 @@ func (u *jsiiProxy_Uuid) GetNumberMapAttribute(terraformAttribute *string) *map[
 	return returns
 }
 
-func (u *jsiiProxy_Uuid) GetStringAttribute(terraformAttribute *string) *string {
-	if err := u.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+func (i *jsiiProxy_Integer) GetStringAttribute(terraformAttribute *string) *string {
+	if err := i.validateGetStringAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		u,
+		i,
 		"getStringAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -636,14 +739,14 @@ func (u *jsiiProxy_Uuid) GetStringAttribute(terraformAttribute *string) *string 
 	return returns
 }
 
-func (u *jsiiProxy_Uuid) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
-	if err := u.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+func (i *jsiiProxy_Integer) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := i.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
-		u,
+		i,
 		"getStringMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -652,14 +755,14 @@ func (u *jsiiProxy_Uuid) GetStringMapAttribute(terraformAttribute *string) *map[
 	return returns
 }
 
-func (u *jsiiProxy_Uuid) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
-	if err := u.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+func (i *jsiiProxy_Integer) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := i.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
-		u,
+		i,
 		"interpolationForAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -668,38 +771,46 @@ func (u *jsiiProxy_Uuid) InterpolationForAttribute(terraformAttribute *string) c
 	return returns
 }
 
-func (u *jsiiProxy_Uuid) OverrideLogicalId(newLogicalId *string) {
-	if err := u.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+func (i *jsiiProxy_Integer) OverrideLogicalId(newLogicalId *string) {
+	if err := i.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		u,
+		i,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
 	)
 }
 
-func (u *jsiiProxy_Uuid) ResetKeepers() {
+func (i *jsiiProxy_Integer) ResetKeepers() {
 	_jsii_.InvokeVoid(
-		u,
+		i,
 		"resetKeepers",
 		nil, // no parameters
 	)
 }
 
-func (u *jsiiProxy_Uuid) ResetOverrideLogicalId() {
+func (i *jsiiProxy_Integer) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
-		u,
+		i,
 		"resetOverrideLogicalId",
 		nil, // no parameters
 	)
 }
 
-func (u *jsiiProxy_Uuid) SynthesizeAttributes() *map[string]interface{} {
+func (i *jsiiProxy_Integer) ResetSeed() {
+	_jsii_.InvokeVoid(
+		i,
+		"resetSeed",
+		nil, // no parameters
+	)
+}
+
+func (i *jsiiProxy_Integer) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
-		u,
+		i,
 		"synthesizeAttributes",
 		nil, // no parameters
 		&returns,
@@ -708,11 +819,11 @@ func (u *jsiiProxy_Uuid) SynthesizeAttributes() *map[string]interface{} {
 	return returns
 }
 
-func (u *jsiiProxy_Uuid) ToMetadata() interface{} {
+func (i *jsiiProxy_Integer) ToMetadata() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
-		u,
+		i,
 		"toMetadata",
 		nil, // no parameters
 		&returns,
@@ -721,11 +832,11 @@ func (u *jsiiProxy_Uuid) ToMetadata() interface{} {
 	return returns
 }
 
-func (u *jsiiProxy_Uuid) ToString() *string {
+func (i *jsiiProxy_Integer) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		u,
+		i,
 		"toString",
 		nil, // no parameters
 		&returns,
@@ -734,11 +845,11 @@ func (u *jsiiProxy_Uuid) ToString() *string {
 	return returns
 }
 
-func (u *jsiiProxy_Uuid) ToTerraform() interface{} {
+func (i *jsiiProxy_Integer) ToTerraform() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
-		u,
+		i,
 		"toTerraform",
 		nil, // no parameters
 		&returns,
