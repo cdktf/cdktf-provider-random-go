@@ -68,6 +68,10 @@ func (j *jsiiProxy_StringResource) validateSetConnectionParameters(val interface
 	return nil
 }
 
+func (j *jsiiProxy_StringResource) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_StringResource) validateSetKeepersParameters(val *map[string]*string) error {
 	return nil
 }

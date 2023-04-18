@@ -68,6 +68,10 @@ func (j *jsiiProxy_Shuffle) validateSetConnectionParameters(val interface{}) err
 	return nil
 }
 
+func (j *jsiiProxy_Shuffle) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Shuffle) validateSetInputParameters(val *[]*string) error {
 	return nil
 }

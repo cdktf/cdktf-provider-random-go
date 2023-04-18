@@ -8,7 +8,7 @@ type UuidConfig struct {
 	// Experimental.
 	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
 	// Experimental.
-	Count *float64 `field:"optional" json:"count" yaml:"count"`
+	Count interface{} `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
@@ -23,7 +23,7 @@ type UuidConfig struct {
 	//
 	// See [the main provider documentation](../index.html) for more information.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/random/r/uuid#keepers Uuid#keepers}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/uuid#keepers Uuid#keepers}
 	Keepers *map[string]*string `field:"optional" json:"keepers" yaml:"keepers"`
 }
 

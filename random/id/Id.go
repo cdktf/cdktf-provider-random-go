@@ -2,14 +2,14 @@ package id
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-random-go/random/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-random-go/random/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-random-go/random/v6/id/internal"
+	"github.com/cdktf/cdktf-provider-random-go/random/v7/id/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/random/r/id random_id}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/id random_id}.
 type Id interface {
 	cdktf.TerraformResource
 	B64Std() *string
@@ -26,9 +26,9 @@ type Id interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	Dec() *string
 	// Experimental.
 	DependsOn() *[]*string
@@ -187,8 +187,8 @@ func (j *jsiiProxy_Id) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Id) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_Id) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -388,7 +388,7 @@ func (j *jsiiProxy_Id) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/random/r/id random_id} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/id random_id} Resource.
 func NewId(scope constructs.Construct, id *string, config *IdConfig) Id {
 	_init_.Initialize()
 
@@ -406,7 +406,7 @@ func NewId(scope constructs.Construct, id *string, config *IdConfig) Id {
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/random/r/id random_id} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/id random_id} Resource.
 func NewId_Override(i Id, scope constructs.Construct, id *string, config *IdConfig) {
 	_init_.Initialize()
 
@@ -439,7 +439,10 @@ func (j *jsiiProxy_Id)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Id)SetCount(val *float64) {
+func (j *jsiiProxy_Id)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

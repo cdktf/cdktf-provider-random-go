@@ -2,14 +2,14 @@ package shuffle
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-random-go/random/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-random-go/random/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-random-go/random/v6/shuffle/internal"
+	"github.com/cdktf/cdktf-provider-random-go/random/v7/shuffle/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/random/r/shuffle random_shuffle}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/shuffle random_shuffle}.
 type Shuffle interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type Shuffle interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -148,8 +148,8 @@ func (j *jsiiProxy_Shuffle) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Shuffle) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_Shuffle) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -379,7 +379,7 @@ func (j *jsiiProxy_Shuffle) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/random/r/shuffle random_shuffle} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/shuffle random_shuffle} Resource.
 func NewShuffle(scope constructs.Construct, id *string, config *ShuffleConfig) Shuffle {
 	_init_.Initialize()
 
@@ -397,7 +397,7 @@ func NewShuffle(scope constructs.Construct, id *string, config *ShuffleConfig) S
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/random/r/shuffle random_shuffle} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/shuffle random_shuffle} Resource.
 func NewShuffle_Override(s Shuffle, scope constructs.Construct, id *string, config *ShuffleConfig) {
 	_init_.Initialize()
 
@@ -419,7 +419,10 @@ func (j *jsiiProxy_Shuffle)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Shuffle)SetCount(val *float64) {
+func (j *jsiiProxy_Shuffle)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

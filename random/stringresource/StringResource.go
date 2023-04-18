@@ -2,14 +2,14 @@ package stringresource
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-random-go/random/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-random-go/random/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-random-go/random/v6/stringresource/internal"
+	"github.com/cdktf/cdktf-provider-random-go/random/v7/stringresource/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/random/r/string random_string}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/string random_string}.
 type StringResource interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type StringResource interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -180,8 +180,8 @@ func (j *jsiiProxy_StringResource) ConstructNodeMetadata() *map[string]interface
 	return returns
 }
 
-func (j *jsiiProxy_StringResource) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_StringResource) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -571,7 +571,7 @@ func (j *jsiiProxy_StringResource) UpperInput() interface{} {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/random/r/string random_string} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/string random_string} Resource.
 func NewStringResource(scope constructs.Construct, id *string, config *StringResourceConfig) StringResource {
 	_init_.Initialize()
 
@@ -589,7 +589,7 @@ func NewStringResource(scope constructs.Construct, id *string, config *StringRes
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/random/r/string random_string} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/string random_string} Resource.
 func NewStringResource_Override(s StringResource, scope constructs.Construct, id *string, config *StringResourceConfig) {
 	_init_.Initialize()
 
@@ -611,7 +611,10 @@ func (j *jsiiProxy_StringResource)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_StringResource)SetCount(val *float64) {
+func (j *jsiiProxy_StringResource)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",
