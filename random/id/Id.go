@@ -1,11 +1,14 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package id
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-random-go/random/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-random-go/random/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-random-go/random/v8/id/internal"
+	"github.com/cdktf/cdktf-provider-random-go/random/v9/id/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
