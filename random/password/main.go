@@ -14,6 +14,7 @@ func init() {
 		"@cdktf/provider-random.password.Password",
 		reflect.TypeOf((*Password)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addMoveTarget", GoMethod: "AddMoveTarget"},
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
 			_jsii_.MemberProperty{JsiiProperty: "bcryptHash", GoGetter: "BcryptHash"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
@@ -34,6 +35,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
+			_jsii_.MemberMethod{JsiiMethod: "importFrom", GoMethod: "ImportFrom"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "keepers", GoGetter: "Keepers"},
 			_jsii_.MemberProperty{JsiiProperty: "keepersInput", GoGetter: "KeepersInput"},
@@ -50,6 +52,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "minSpecialInput", GoGetter: "MinSpecialInput"},
 			_jsii_.MemberProperty{JsiiProperty: "minUpper", GoGetter: "MinUpper"},
 			_jsii_.MemberProperty{JsiiProperty: "minUpperInput", GoGetter: "MinUpperInput"},
+			_jsii_.MemberMethod{JsiiMethod: "moveTo", GoMethod: "MoveTo"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberProperty{JsiiProperty: "number", GoGetter: "Number"},
 			_jsii_.MemberProperty{JsiiProperty: "numberInput", GoGetter: "NumberInput"},
