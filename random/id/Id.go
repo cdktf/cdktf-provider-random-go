@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/id random_id}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/random/3.6.0/docs/resources/id random_id}.
 type Id interface {
 	cdktf.TerraformResource
 	B64Std() *string
@@ -99,12 +99,22 @@ type Id interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -399,7 +409,7 @@ func (j *jsiiProxy_Id) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/id random_id} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/random/3.6.0/docs/resources/id random_id} Resource.
 func NewId(scope constructs.Construct, id *string, config *IdConfig) Id {
 	_init_.Initialize()
 
@@ -417,7 +427,7 @@ func NewId(scope constructs.Construct, id *string, config *IdConfig) Id {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/id random_id} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/random/3.6.0/docs/resources/id random_id} Resource.
 func NewId_Override(i Id, scope constructs.Construct, id *string, config *IdConfig) {
 	_init_.Initialize()
 
@@ -798,6 +808,19 @@ func (i *jsiiProxy_Id) GetStringMapAttribute(terraformAttribute *string) *map[st
 	return returns
 }
 
+func (i *jsiiProxy_Id) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (i *jsiiProxy_Id) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := i.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -825,6 +848,17 @@ func (i *jsiiProxy_Id) InterpolationForAttribute(terraformAttribute *string) cdk
 	return returns
 }
 
+func (i *jsiiProxy_Id) MoveFromId(id *string) {
+	if err := i.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (i *jsiiProxy_Id) MoveTo(moveTarget *string, index interface{}) {
 	if err := i.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -833,6 +867,17 @@ func (i *jsiiProxy_Id) MoveTo(moveTarget *string, index interface{}) {
 		i,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (i *jsiiProxy_Id) MoveToId(id *string) {
+	if err := i.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

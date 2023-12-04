@@ -59,7 +59,15 @@ func (s *jsiiProxy_Shuffle) validateInterpolationForAttributeParameters(terrafor
 	return nil
 }
 
+func (s *jsiiProxy_Shuffle) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_Shuffle) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (s *jsiiProxy_Shuffle) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

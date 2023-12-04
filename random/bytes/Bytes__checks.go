@@ -3,7 +3,7 @@
 
 //go:build !no_runtime_type_checking
 
-package shuffle
+package bytes
 
 import (
 	"fmt"
@@ -14,7 +14,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-func (s *jsiiProxy_Shuffle) validateAddMoveTargetParameters(moveTarget *string) error {
+func (b *jsiiProxy_Bytes) validateAddMoveTargetParameters(moveTarget *string) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
 	}
@@ -22,7 +22,7 @@ func (s *jsiiProxy_Shuffle) validateAddMoveTargetParameters(moveTarget *string) 
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateAddOverrideParameters(path *string, value interface{}) error {
+func (b *jsiiProxy_Bytes) validateAddOverrideParameters(path *string, value interface{}) error {
 	if path == nil {
 		return fmt.Errorf("parameter path is required, but nil was provided")
 	}
@@ -34,7 +34,7 @@ func (s *jsiiProxy_Shuffle) validateAddOverrideParameters(path *string, value in
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+func (b *jsiiProxy_Bytes) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -42,7 +42,7 @@ func (s *jsiiProxy_Shuffle) validateGetAnyMapAttributeParameters(terraformAttrib
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+func (b *jsiiProxy_Bytes) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -50,7 +50,7 @@ func (s *jsiiProxy_Shuffle) validateGetBooleanAttributeParameters(terraformAttri
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+func (b *jsiiProxy_Bytes) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -58,7 +58,7 @@ func (s *jsiiProxy_Shuffle) validateGetBooleanMapAttributeParameters(terraformAt
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateGetListAttributeParameters(terraformAttribute *string) error {
+func (b *jsiiProxy_Bytes) validateGetListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -66,7 +66,7 @@ func (s *jsiiProxy_Shuffle) validateGetListAttributeParameters(terraformAttribut
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+func (b *jsiiProxy_Bytes) validateGetNumberAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -74,7 +74,7 @@ func (s *jsiiProxy_Shuffle) validateGetNumberAttributeParameters(terraformAttrib
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+func (b *jsiiProxy_Bytes) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -82,7 +82,7 @@ func (s *jsiiProxy_Shuffle) validateGetNumberListAttributeParameters(terraformAt
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+func (b *jsiiProxy_Bytes) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -90,7 +90,7 @@ func (s *jsiiProxy_Shuffle) validateGetNumberMapAttributeParameters(terraformAtt
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateGetStringAttributeParameters(terraformAttribute *string) error {
+func (b *jsiiProxy_Bytes) validateGetStringAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -98,7 +98,7 @@ func (s *jsiiProxy_Shuffle) validateGetStringAttributeParameters(terraformAttrib
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+func (b *jsiiProxy_Bytes) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -106,7 +106,7 @@ func (s *jsiiProxy_Shuffle) validateGetStringMapAttributeParameters(terraformAtt
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateImportFromParameters(id *string) error {
+func (b *jsiiProxy_Bytes) validateImportFromParameters(id *string) error {
 	if id == nil {
 		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
@@ -114,7 +114,7 @@ func (s *jsiiProxy_Shuffle) validateImportFromParameters(id *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+func (b *jsiiProxy_Bytes) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -122,7 +122,7 @@ func (s *jsiiProxy_Shuffle) validateInterpolationForAttributeParameters(terrafor
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateMoveFromIdParameters(id *string) error {
+func (b *jsiiProxy_Bytes) validateMoveFromIdParameters(id *string) error {
 	if id == nil {
 		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
@@ -130,7 +130,7 @@ func (s *jsiiProxy_Shuffle) validateMoveFromIdParameters(id *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateMoveToParameters(moveTarget *string, index interface{}) error {
+func (b *jsiiProxy_Bytes) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
 	}
@@ -191,7 +191,7 @@ func (s *jsiiProxy_Shuffle) validateMoveToParameters(moveTarget *string, index i
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateMoveToIdParameters(id *string) error {
+func (b *jsiiProxy_Bytes) validateMoveToIdParameters(id *string) error {
 	if id == nil {
 		return fmt.Errorf("parameter id is required, but nil was provided")
 	}
@@ -199,7 +199,7 @@ func (s *jsiiProxy_Shuffle) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_Shuffle) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+func (b *jsiiProxy_Bytes) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
 	}
@@ -207,7 +207,7 @@ func (s *jsiiProxy_Shuffle) validateOverrideLogicalIdParameters(newLogicalId *st
 	return nil
 }
 
-func validateShuffle_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+func validateBytes_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")
 	}
@@ -223,7 +223,7 @@ func validateShuffle_GenerateConfigForImportParameters(scope constructs.Construc
 	return nil
 }
 
-func validateShuffle_IsConstructParameters(x interface{}) error {
+func validateBytes_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -231,7 +231,7 @@ func validateShuffle_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
-func validateShuffle_IsTerraformElementParameters(x interface{}) error {
+func validateBytes_IsTerraformElementParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -239,7 +239,7 @@ func validateShuffle_IsTerraformElementParameters(x interface{}) error {
 	return nil
 }
 
-func validateShuffle_IsTerraformResourceParameters(x interface{}) error {
+func validateBytes_IsTerraformResourceParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -247,7 +247,7 @@ func validateShuffle_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
-func (j *jsiiProxy_Shuffle) validateSetConnectionParameters(val interface{}) error {
+func (j *jsiiProxy_Bytes) validateSetConnectionParameters(val interface{}) error {
 	switch val.(type) {
 	case *cdktf.SSHProvisionerConnection:
 		val := val.(*cdktf.SSHProvisionerConnection)
@@ -280,7 +280,7 @@ func (j *jsiiProxy_Shuffle) validateSetConnectionParameters(val interface{}) err
 	return nil
 }
 
-func (j *jsiiProxy_Shuffle) validateSetCountParameters(val interface{}) error {
+func (j *jsiiProxy_Bytes) validateSetCountParameters(val interface{}) error {
 	switch val.(type) {
 	case *float64:
 		// ok
@@ -337,7 +337,7 @@ func (j *jsiiProxy_Shuffle) validateSetCountParameters(val interface{}) error {
 	return nil
 }
 
-func (j *jsiiProxy_Shuffle) validateSetInputParameters(val *[]*string) error {
+func (j *jsiiProxy_Bytes) validateSetKeepersParameters(val *map[string]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -345,7 +345,7 @@ func (j *jsiiProxy_Shuffle) validateSetInputParameters(val *[]*string) error {
 	return nil
 }
 
-func (j *jsiiProxy_Shuffle) validateSetKeepersParameters(val *map[string]*string) error {
+func (j *jsiiProxy_Bytes) validateSetLengthParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -353,7 +353,7 @@ func (j *jsiiProxy_Shuffle) validateSetKeepersParameters(val *map[string]*string
 	return nil
 }
 
-func (j *jsiiProxy_Shuffle) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+func (j *jsiiProxy_Bytes) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
 	}
@@ -361,7 +361,7 @@ func (j *jsiiProxy_Shuffle) validateSetLifecycleParameters(val *cdktf.TerraformR
 	return nil
 }
 
-func (j *jsiiProxy_Shuffle) validateSetProvisionersParameters(val *[]interface{}) error {
+func (j *jsiiProxy_Bytes) validateSetProvisionersParameters(val *[]interface{}) error {
 	for idx_97dfc6, v := range *val {
 		switch v.(type) {
 		case *cdktf.FileProvisioner:
@@ -407,23 +407,7 @@ func (j *jsiiProxy_Shuffle) validateSetProvisionersParameters(val *[]interface{}
 	return nil
 }
 
-func (j *jsiiProxy_Shuffle) validateSetResultCountParameters(val *float64) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_Shuffle) validateSetSeedParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func validateNewShuffleParameters(scope constructs.Construct, id *string, config *ShuffleConfig) error {
+func validateNewBytesParameters(scope constructs.Construct, id *string, config *BytesConfig) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")
 	}
