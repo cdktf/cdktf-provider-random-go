@@ -5,10 +5,10 @@ package uuid
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-random-go/random/v10/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-random-go/random/v11/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-random-go/random/v10/uuid/internal"
+	"github.com/cdktf/cdktf-provider-random-go/random/v11/uuid/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -114,6 +114,9 @@ type Uuid interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -812,6 +815,32 @@ func (u *jsiiProxy_Uuid) SynthesizeAttributes() *map[string]interface{} {
 	_jsii_.Invoke(
 		u,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (u *jsiiProxy_Uuid) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		u,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (u *jsiiProxy_Uuid) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		u,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)
