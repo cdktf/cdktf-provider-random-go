@@ -1,12 +1,15 @@
-# CDKTF Go bindings for hashicorp/random provider version 3.6.0
+# CDKTF Go bindings for hashicorp/random provider version 3.6.1
 
-This repo builds and publishes the [Terraform random provider](https://registry.terraform.io/providers/hashicorp/random/3.6.0/docs) bindings for [CDK for Terraform](https://cdk.tf).
+This repo builds and publishes the [Terraform random provider](https://registry.terraform.io/providers/hashicorp/random/3.6.1/docs) bindings for [CDK for Terraform](https://cdk.tf).
 
 ## Go Package
 
 The go package is generated into the [`github.com/cdktf/cdktf-provider-random-go`](https://github.com/cdktf/cdktf-provider-random-go) package.
 
-`go get github.com/cdktf/cdktf-provider-random-go/random`
+`go get github.com/cdktf/cdktf-provider-random-go/random/<version>`
+
+Where `<version>` is the version of the prebuilt provider you would like to use e.g. `v11`. The full module name can be found
+within the [go.mod](https://github.com/cdktf/cdktf-provider-random-go/blob/main/random/go.mod#L1) file.
 
 ## Docs
 
@@ -20,7 +23,7 @@ This project is explicitly not tracking the Terraform random provider version 1:
 These are the upstream dependencies:
 
 * [CDK for Terraform](https://cdk.tf)
-* [Terraform random provider](https://registry.terraform.io/providers/hashicorp/random/3.6.0)
+* [Terraform random provider](https://registry.terraform.io/providers/hashicorp/random/3.6.1)
 * [Terraform Engine](https://terraform.io)
 
 If there are breaking changes (backward incompatible) in any of the above, the major version of this project will be bumped.
