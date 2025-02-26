@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/random/3.6.3/docs random}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/random/3.7.1/docs random}.
 type RandomProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -186,7 +186,7 @@ func (j *jsiiProxy_RandomProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/random/3.6.3/docs random} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/random/3.7.1/docs random} Resource.
 func NewRandomProvider(scope constructs.Construct, id *string, config *RandomProviderConfig) RandomProvider {
 	_init_.Initialize()
 
@@ -204,7 +204,7 @@ func NewRandomProvider(scope constructs.Construct, id *string, config *RandomPro
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/random/3.6.3/docs random} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/random/3.7.1/docs random} Resource.
 func NewRandomProvider_Override(r RandomProvider, scope constructs.Construct, id *string, config *RandomProviderConfig) {
 	_init_.Initialize()
 
